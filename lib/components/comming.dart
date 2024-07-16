@@ -19,9 +19,10 @@ class Comming extends StatelessWidget {
         children: [
           Stack(
             children: [
+              
               Container(
-                width: 160,
-                height: 90,
+                width: 230,
+                height: 120,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
@@ -29,16 +30,33 @@ class Comming extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        Colors.black.withOpacity(0.7),
+                      ],
+                      stops: [0.5, 1.0],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                ),
               ),
               Positioned(
-                bottom: 10,
+                bottom: 5,
                 left: 10,
                 right: 10,
-                child: Text(
-                  date,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
+                child: Center(
+                  child: Text(
+                    date,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
               ),
